@@ -1,4 +1,4 @@
-=== Custom Coming Soon Pages ===
+=== Custom Coming Soon Page ===
 Contributors: cssjockey
 Donate link: 
 Tags: coming soon, under construction, maintenance page, custom landing page
@@ -10,7 +10,7 @@ This plugin shows a 'Custom Coming Soon' page to all users who are not logged in
 
 == Description ==
 
-Custom Coming Soon Pages WordPress Plugin allows you to display a Customized Coming Soon Page or Under Construction page to normal visitors or regular members of your WordPress based website or Blog – while the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard.
+Custom Coming Soon Pages WordPress Plugin allows you to display a Customized Coming Soon Page or Under Construction page to normal visitors or regular members of your WordPress based website or Blog - while the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard.
 
 This will enable you to perform upgrades, fix nasty bugs or preview jazzy enhancements to your design live on your WordPress based website or blog without letting your users and normal visitors see crappy error messages or changes to the design until you really want them to.
 
@@ -21,8 +21,6 @@ This will enable you to perform upgrades, fix nasty bugs or preview jazzy enhanc
 5. Countdown Timer
 6. Subscribe form
 7. Social Profiles
-
-[Live Demo](http://plugins.cssjockey.com/coming-soon/)
 
 Please visit [our support forum](http://support.cssjockey.com/) to report bugs, support and request more features.
 
