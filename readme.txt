@@ -22,6 +22,8 @@ This will enable you to perform upgrades, fix nasty bugs or preview jazzy enhanc
 6. Subscribe form
 7. Social Profiles
 
+[Live Demo](http://plugins.cssjockey.com/coming-soon/)
+
 Please visit [our support forum](http://support.cssjockey.com/) to report bugs, support and request more features.
 
 == Installation ==
