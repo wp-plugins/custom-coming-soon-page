@@ -1,4 +1,4 @@
-=== Custom Coming Soon Page ===
+=== Custom Coming Soon Pages ===
 Contributors: cssjockey
 Donate link: 
 Tags: coming soon, under construction, maintenance page, custom landing page
