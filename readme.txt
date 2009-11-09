@@ -22,6 +22,8 @@ This will enable you to perform upgrades, fix nasty bugs or preview jazzy enhanc
 6. Subscribe form
 7. Social Profiles
 
+[Live Demo](http://plugins.cssjockey.com/coming-soon/)
+
 Please visit [our support forum](http://support.cssjockey.com/) to report bugs, support and request more features.
 
 == Installation ==
@@ -32,8 +34,6 @@ Please visit [our support forum](http://support.cssjockey.com/) to report bugs, 
 4. Configure the plugin from Settings > CJ Coming Soon options page.
 
 == Frequently Asked Questions ==
-Please visit our official support forum to report bugs, support and request more features: http://support.cssjockey.com/
-
 = Help & Support? =
 
 Please visit our official support forum to report bugs, support and request more features: http://support.cssjockey.com/
