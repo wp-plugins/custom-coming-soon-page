@@ -3,7 +3,7 @@
 Plugin Name: CJ Coming Soon
 Plugin URI: http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin
 Description: This plugin shows a 'Custom Coming Soon' page to all users who are not logged in however, the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard. Visit our <strong><a href="http://support.cssjockey.com">Support Forum</a></strong> for support, report bugs and request more features and share your themes.
-Version: 1.0
+Version: 1.01
 Author: CSSJockey
 Author URI: http://www.cssjockey.com
 /*  Copyright 2009 CSSJockey.com  (email : admin@cssjockey.com)
@@ -95,7 +95,7 @@ function cj_splash_options_page(){
 							<b>Custom Background</b>: You can specify desired background color and image below.<br />
 							<b>Custom xHTML</b>: You can place your xHTML/CSS/PHP documents in wp-plugins/cj-coming-soon/themes/custom_xHTML/ directory ',
 				"otype" => "radio",
-                                "ovalue" => array("Default", "Custom Background", "Custom xHTML")),
+                                "ovalue" => array("Default", "Without Timer", "Custom Background", "Custom xHTML")),
 			array(
 				"oid" => $shortname."custom_bg",
 				"oclass" => $shortname."basic_config",
@@ -442,7 +442,6 @@ $rss_items = $rss->get_items(0, $maxitems);
 </div><!-- /cjt-wrap -->
 </div><!-- /wrap -->	
 <?php } //options page
-
 /************************************************************************************************************/
 /******************************************* ADMIN SETUP ENDS HERE ******************************************/
 /************************************************************************************************************/
@@ -476,6 +475,7 @@ function sp_override(){
                 case "Default": include('themes/default/index.php'); break;
                 case "Custom Background": include('themes/custom_bg/index.php'); break;
                 case "Custom xHTML": include('themes/custom_xhtml/index.php'); break;
+                case "Without Timer": include('themes/default_no_timer/index.php'); break;
                 default: include('themes/default/index.php');
             }
         }

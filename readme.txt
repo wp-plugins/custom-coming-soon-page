@@ -26,6 +26,8 @@ This will enable you to perform upgrades, fix nasty bugs or preview jazzy enhanc
 
 Please visit [our support forum](http://support.cssjockey.com/) to report bugs, support and request more features.
 
+[Other plugins by CSSJockey](http://www.cssjockey.com/wordpress-plugins)
+
 == Installation ==
 
 1. Extract the Plugin Folder from the downloaded ZIP file.
@@ -34,8 +36,10 @@ Please visit [our support forum](http://support.cssjockey.com/) to report bugs, 
 4. Configure the plugin from Settings > CJ Coming Soon options page.
 
 == Frequently Asked Questions ==
-= Help & Support? =
+= Why I don't see any changes after activating this plugin? =
+This plugin shows coming soon page to uses who are not logged in. To see it action either logout and open the site again or open the website in different browser without logging in to dashboard.
 
+= Where do I report bugs or suggest more features? =
 Please visit our official support forum to report bugs, support and request more features: http://support.cssjockey.com/
 
 == Screenshots ==
@@ -44,4 +48,5 @@ Please visit http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages
 
 == Changelog ==
 
+* 1.01 - Added default theme without timer - 10 Nov, 2009
 * 1.0 - Initial Release - 08 Nov, 2009
