@@ -51,6 +51,10 @@ Please visit our official support forum to report bugs, support and request more
 
 == Changelog ==
 
+= 1.03 =
+* Updated all CSS IDs and classes to avoid conflicts with other themes.
+* Fixed the issues being created by the date setup and the Count Down Timer.
+
 = 1.02 =
 * Added option for Admin Login link in the footer
 * Optimized CSS to display Coming Soon Message without the heading

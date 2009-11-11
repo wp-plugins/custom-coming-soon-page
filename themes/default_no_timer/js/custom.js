@@ -5,9 +5,9 @@
  * If you change the contents below sky might fall on your head!
  */
 $(document).ready(function(){
-    $("form#sendsubscriber").submit(function(){
+    $("form#cjsp-sendsubscriber").submit(function(){
         var emailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-        var email = $("#semail");
+        var email = $("#cjsp-semail");
         if (email.val() == "Your Email" || email.val() == "" || email.val() == "Thank you") {
             alert("Please enter your email address!");
             email.focus();
@@ -29,9 +29,9 @@ $(document).ready(function(){
                     data: dataString,
                     success: function(response){
                         $('#' + update + "").html(response);
-                        $("#smessage").removeClass("sploading");
+                        $("#cjsp-smessage").removeClass("cjsp-sploading");
                         $(email).val('Enter your email address');
-                        $("#semail").val('Thank you');
+                        $("#cjsp-semail").val('Thank you');
                     }
                 });
             }
@@ -39,10 +39,10 @@ $(document).ready(function(){
     })
 	
 
-    $("#smessage").ajaxStart(function(){
-        $("#semail").val('Please wait..');
+    $("#cjsp-smessage").ajaxStart(function(){
+        $("#cjsp-semail").val('Please wait..');
         $(this).html("&nbsp;");
-        $(this).addClass("sploading");
+        $(this).addClass("cjsp-sploading");
         return false;
     });
 		

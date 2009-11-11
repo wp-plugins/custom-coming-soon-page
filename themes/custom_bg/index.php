@@ -34,7 +34,7 @@ $settingsname = $shortname."settings";
 <script type="text/javascript" src="<?php echo $sp_plugin_url ?>/js/custom.js"></script>
 <!--[if lte IE 6]>
 <link rel="stylesheet" type="text/css" href="<?php echo $sp_plugin_url ?>/styleie6.css" media="screen" />
-<script type="text/javascript"> DD_roundies.addRule('.pngfix'); </script>
+<script type="text/javascript"> DD_roundies.addRule('.cjsp-pngfix'); </script>
 <![endif]-->
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="<?php echo $sp_plugin_url ?>/styleie7.css" media="screen" />
@@ -60,29 +60,29 @@ body{
 <?php echo sptop('head_tags')."\n"; ?>
 </head>
 <body>
-<div id="wrapper">
-<div id="logo">
+<div id="cjsp-wrapper">
+<div id="cjsp-logo">
 	<a href="<?php bloginfo('home'); ?>" title="<?php bloginfo('description'); ?>">
-		<img class="pngfix" src="<?php if(sptop('logo_url') == "yoursite.com/images/logo.png") {echo $sp_plugin_url.'/images/logo.png';} else { echo sptop('logo_url');} ?>" alt="<?php bloginfo('description'); ?>" />
+		<img class="cjsp-pngfix" src="<?php if(sptop('logo_url') == "yoursite.com/images/logo.png") {echo $sp_plugin_url.'/images/logo.png';} else { echo sptop('logo_url');} ?>" alt="<?php bloginfo('description'); ?>" />
 	</a>
 </div><!-- /logo -->
-<div id="content" class="pngfix">
-    <div class="topsection">
-	<h1 class="heading"><?php echo sptop('page_heading'); ?></h1><!-- /heading -->
-	<p class="msg"><?php echo sptop('page_msg'); ?></p><!-- /message -->
+<div id="cjsp-content" class="cjsp-pngfix">
+    <div class="cjsp-topsection">
+	<h1 class="cjsp-heading"><?php echo sptop('page_heading'); ?></h1><!-- /heading -->
+	<p class="cjsp-msg"><?php echo sptop('page_msg'); ?></p><!-- /message -->
     </div>
-	<div id="countdown">54 Days, 21 Hours, 11 Minutes, 23 Seconds</div><!-- /countdown -->
-	<div id="subscribeform">
-		<form action="<?php echo $sp_plugin_url; ?>/mail.php#smessage" method="post" class="aform" id="sendsubscriber">
-			<input type="text" class="inputbox" id="semail" name="semail" value="Enter your email address"  onfocus="if ( this.value == this.defaultValue ) this.value = '';" onblur="if ( this.value == '' ) this.value = this.defaultValue" />
+	<div id="cjsp-countdown">54 Days, 21 Hours, 11 Minutes, 23 Seconds</div><!-- /countdown -->
+	<div id="cjsp-subscribeform">
+		<form action="<?php echo $sp_plugin_url; ?>/mail.php#smessage" method="post" class="aform" id="cjsp-sendsubscriber">
+			<input type="text" class="cjsp-inputbox" id="cjsp-semail" name="semail" value="Enter your email address"  onfocus="if ( this.value == this.defaultValue ) this.value = '';" onblur="if ( this.value == '' ) this.value = this.defaultValue" />
 			<input type="hidden" name="sto" value="<?php echo sptop('email_id'); ?>" />
 			<input type="hidden" name="ssubject" value="<?php echo sptop('email_subject'); ?>" />
 			<input type="hidden" name="sthankyou" value="<?php echo sptop('email_thankyou'); ?>" />
-			<input type="submit" value="" name="sendsinfo" class="submit" />
+			<input type="submit" value="" name="sendsinfo" class="cjsp-submit" />
 		</form>
 	</div><!-- /subscribeform -->
-	<p id="smessage" class="spammsg">Your email is safe with us. We hate spam as much as you do.</p>
-	<p class="connect">
+	<p id="cjsp-smessage" class="cjsp-spammsg">Your email is safe with us. We hate spam as much as you do.</p>
+	<p class="cjsp-connect">
 		<?php
 		if(sptop('twitter_username') == "" && sptop('facebook_username') == ""){
 			$connect_via = "";
@@ -109,7 +109,7 @@ body{
 		<?php echo $connect_via.$twitter.$facebook.$rssurl; ?>
 	</p>
 </div><!-- /content -->
-<p class="credit">
+<p class="cjsp-credit">
 	Powered by <a href="http://www.wordpress.org" title="WordPress.org">WordPress</a> | <a href="http://www.cssjockey.com" title="CSSJockey.com">CSSJockey</a>
         <?php echo $loginlink; ?>
 </p>

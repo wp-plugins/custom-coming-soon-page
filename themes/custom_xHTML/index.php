@@ -19,7 +19,10 @@ $plugin_path = WP_CONTENT_URL.'/plugins/'.plugin_basename(dirname(__FILE__));
 <h2 align="center">Coming Soon</h2>
 <br />
 <p align="center">
-		Please paste your xHTML/CSS documents in <strong>wp-plugins/cj-coming-soon/themes/custom_xHTML/</strong> directory.
+    You can paste your xHTML/CSS/Javascript documents in <strong>wp-plugins/cj-coming-soon/themes/custom_xhtml/</strong> directory.
+</p>
+<p align="center">
+    If you want to use the back-end options, copy all files from the default directory and modify as per your requirements.
 </p>
 </body>
 </html>

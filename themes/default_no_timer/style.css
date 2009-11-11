@@ -10,29 +10,29 @@ body{
 a{
 	color:#196fb1;
 }
-#wrapper{
+#cjsp-wrapper{
 	width:1000px;
 	margin:0 auto;
 }
-#logo{
+#cjsp-logo{
 	text-align:center;
 	padding:90px 0 15px 0;
 }
-#content{
+#cjsp-content{
 	background:url(images/contentbg.png) no-repeat;
 	width:1000px;
 	height:342px;
 }
-.topsection{
+.cjsp-topsection{
     height:184px;
 }
-.heading{
+.cjsp-heading{
 	font-weight:normal;
 	font-size:24pt;
 	text-align:center;
 	padding:7px 0 0px 0;
 }
-.msg{
+.cjsp-msg{
 	font-size:12pt;
 	margin:0 auto;
 	width:620px;
@@ -40,19 +40,19 @@ a{
 	height:125px;
 	overflow:hidden;
 }
-#countdown{
+#cjsp-countdown{
 	margin:0 auto;
 	width:400px;
 	font-size:13pt;
 	padding:47px 0 0 105px;
 }
-#subscribeform{
+#cjsp-subscribeform{
 	position:relative;
 	width:370px;
 	height:30px;
 	margin:52px 0 0 320px;
 }
-.inputbox{
+.cjsp-inputbox{
 	font:italic 12pt Georgia;
 	color:#999999;
 	border:0px;
@@ -62,7 +62,7 @@ a{
 	top:5px;
 	left:0px;
 }
-.submit{
+.cjsp-submit{
 	width:100px;
 	height:30px;
 	position:absolute;
@@ -73,20 +73,20 @@ a{
 	display:block;
 	cursor:pointer;
 }
-.spammsg{
+.cjsp-spammsg{
 	margin:7px 0 0 0;
 	text-align:center;
 	font-size:8pt;
 	color:#7a7a7a;
 }
-.connect{
+.cjsp-connect{
 	margin:10px 0 0 0;
 	text-align:center;
 }
-.sploading{
+.cjsp-sploading{
 	background:url(images/loading.gif) center no-repeat !important;
 }
-.credit, .credit a{
+.cjsp-credit, .cjsp-credit a{
 	text-align:center;
 	padding:10px 0 0 0;
 	font:normal 10px verdana;
