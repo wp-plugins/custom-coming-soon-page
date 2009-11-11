@@ -22,7 +22,7 @@ This will enable you to perform upgrades, fix nasty bugs or preview jazzy enhanc
 6. Subscribe form
 7. Social Profiles
 
-[Live Demo](http://plugins.cssjockey.com/coming-soon/)
+[Live Demo](http://plugins.cssjockey.com/coming-soon/) | [More Details](http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin)
 
 Please visit [our support forum](http://support.cssjockey.com/) to report bugs, support and request more features.
 
@@ -36,8 +36,12 @@ Please visit [our support forum](http://support.cssjockey.com/) to report bugs, 
 4. Configure the plugin from Settings > CJ Coming Soon options page.
 
 == Frequently Asked Questions ==
+
 = Why I don't see any changes after activating this plugin? =
 This plugin shows coming soon page to uses who are not logged in. To see it action either logout and open the site again or open the website in different browser without logging in to dashboard.
+
+= I am lost. Where should I login again? =
+You can login to WordPress dashboard by going to http://www.Your-Website.com/wp-admin . You can also enable Login Link in the footer using the plugin options (updated in version 1.02).
 
 = Where do I report bugs or suggest more features? =
 Please visit our official support forum to report bugs, support and request more features: http://support.cssjockey.com/
@@ -47,6 +51,12 @@ Please visit our official support forum to report bugs, support and request more
 Please visit http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin for screenshots and other information.
 
 == Changelog ==
+=1.02=
+* Added option for Admin Login link in the footer
+* Optimized CSS to display Coming Soon Message without the heading
 
-* 1.01 - Added default theme without timer - 10 Nov, 2009
-* 1.0 - Initial Release - 08 Nov, 2009
+=1.01=
+* Added default theme without timer
+
+=1.0=
+* Initial Release

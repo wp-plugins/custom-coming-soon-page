@@ -23,6 +23,9 @@ a{
 	width:1000px;
 	height:342px;
 }
+.topsection{
+    height:140px;
+}
 .heading{
 	font-weight:normal;
 	font-size:24pt;
@@ -41,7 +44,7 @@ a{
 	margin:0 auto;
 	width:400px;
 	font-size:13pt;
-	padding:47px 0 0 105px;
+	padding:16px 0 0 105px;
 }
 #subscribeform{
 	position:relative;

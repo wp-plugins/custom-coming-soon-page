@@ -3,7 +3,7 @@
 Plugin Name: CJ Coming Soon
 Plugin URI: http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin
 Description: This plugin shows a 'Custom Coming Soon' page to all users who are not logged in however, the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard. Visit our <strong><a href="http://support.cssjockey.com">Support Forum</a></strong> for support, report bugs and request more features and share your themes.
-Version: 1.01
+Version: 1.02
 Author: CSSJockey
 Author URI: http://www.cssjockey.com
 /*  Copyright 2009 CSSJockey.com  (email : admin@cssjockey.com)
@@ -28,7 +28,6 @@ $cj_splash_plugin_name = "CJ Splash Page";
 $cj_splash_path = WP_CONTENT_URL.'/plugins/'.plugin_basename(dirname(__FILE__));
 $shortname = strtolower(str_replace(" ", "_", $cj_splash_plugin_name)."_");
 $theme_settings_name = $shortname."settings";
-
 /******************************************
  * ADMIN PAGE SETUP - ADMIN SCRIPTS
 ******************************************/
@@ -97,6 +96,13 @@ function cj_splash_options_page(){
 				"otype" => "radio",
                                 "ovalue" => array("Default", "Without Timer", "Custom Background", "Custom xHTML")),
 			array(
+				"oid" => $shortname."login_link",
+				"oclass" => $shortname."basic_config",
+				"oname" => "Login Link in Footer",
+				"oinfo" => 'Would you like to display login link in the footer?',
+				"otype" => "radio",
+                                "ovalue" => array('No', 'Yes')),
+			array(
 				"oid" => $shortname."custom_bg",
 				"oclass" => $shortname."basic_config",
 				"oname" => "Custom Background Color",
@@ -123,13 +129,13 @@ function cj_splash_options_page(){
 				"oid" => $shortname."page_heading",
 				"oclass" => $shortname."basic_config",
 				"oname" => "Page Heading",
-				"oinfo" => 'Enter heading in the above box. e.g. Comming Soon! or Under Construction!',
+				"oinfo" => 'Enter heading in the above box. e.g. Coming Soon! or Under Construction!',
 				"otype" => "text",
                                 "ovalue" => "Coming Soon!"),
 			array(
 				"oid" => $shortname."page_msg",
 				"oclass" => $shortname."basic_config",
-				"oname" => "Comming Soon Message",
+				"oname" => "Coming Soon Message",
 				"oinfo" => 'Enter a message for the users. Keep it short and <b>Avoid HTML tags.</b>',
 				"otype" => "textarea",
                                 "ovalue" => "We're not there yet - but getting there - and we really want you to know when we're ready. So be sure to stay updated."),
@@ -228,15 +234,15 @@ function cj_splash_options_page(){
 		    array(  
 				"oid" => $shortname."launch_day",
 				"oclass" => $shortname."launch_date",
-				"oname" => "Day (DD)",
-				"oinfo" => 'e.g. 31',
+				"oname" => "Day of the Month (DD)",
+				"oinfo" => 'e.g. 01 - 31',
 				"otype" => "text",
                                 "ovalue" => '15'),
 		    array(  
 				"oid" => $shortname."launch_month",
 				"oclass" => $shortname."launch_date",
 				"oname" => "Month (MM)",
-				"oinfo" => 'e.g. 12',
+				"oinfo" => 'e.g. 01 - 12',
 				"otype" => "text",
                                 "ovalue" => '01'),
 		    array(  
@@ -441,7 +447,23 @@ $rss_items = $rss->get_items(0, $maxitems);
 <iframe src="http://www.cssjockey.com/files/theme-admin.php" scrolling="no" frameborder="0" width="100%"></iframe>
 </div><!-- /cjt-wrap -->
 </div><!-- /wrap -->	
-<?php } //options page
+<?php
+    //PLUGIN SETTINGS CHECK
+    if(get_option('sp_settings_check') == 0) {
+        update_option('sp_settings_check' , '1');
+    }
+} //options page
+
+/******************************************
+ * PLUGIN SETTINGS CHECK
+******************************************/
+register_activation_hook(__FILE__, 'sp_settings_check');
+function sp_settings_check() {
+    update_option('sp_settings_check', '0');
+}//continued above // options page
+if(get_option('sp_settings_check') == '0') {
+    header('location:'.get_bloginfo('wpurl').'/wp-admin/options-general.php?page=coming-soon-settings'); // Change URL as per page
+}
 /************************************************************************************************************/
 /******************************************* ADMIN SETUP ENDS HERE ******************************************/
 /************************************************************************************************************/

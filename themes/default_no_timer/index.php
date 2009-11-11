@@ -62,8 +62,10 @@ $(function(){
 	</a>
 </div><!-- /logo -->
 <div id="content" class="pngfix">
+    <div class="topsection">
 	<h1 class="heading"><?php echo sptop('page_heading'); ?></h1><!-- /heading -->
 	<p class="msg"><?php echo sptop('page_msg'); ?></p><!-- /message -->
+    </div>
 	<div id="subscribeform">
 		<form action="<?php echo $sp_plugin_url; ?>/mail.php#smessage" method="post" class="aform" id="sendsubscriber">
 			<input type="text" class="inputbox" id="semail" name="semail" value="Enter your email address"  onfocus="if ( this.value == this.defaultValue ) this.value = '';" onblur="if ( this.value == '' ) this.value = this.defaultValue" />
@@ -94,12 +96,16 @@ $(function(){
 		if(sptop('rss_url') != ""){
 			$rssurl = ' | <a href="'.sptop('rss_url').'" title="Subscribe" target="_blank">Subscribe via RSS</a>';
 		}
+                if(sptop('login_link') == "Yes"){
+                    $loginlink = ' | <a href="'.get_bloginfo('wpurl').'/wp-admin" title="Login"> Login </a> ';
+                }
 		?>
 		<?php echo $connect_via.$twitter.$facebook.$rssurl; ?>
 	</p>
-</div><!-- /content -->	
+</div><!-- /content -->
 <p class="credit">
 	Powered by <a href="http://www.wordpress.org" title="WordPress.org">WordPress</a> | <a href="http://www.cssjockey.com" title="CSSJockey.com">CSSJockey</a>
+        <?php echo $loginlink; ?>
 </p>
 </div><!-- /wrapper -->
 </body>
