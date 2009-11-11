@@ -47,16 +47,16 @@ You can login to WordPress dashboard by going to http://www.Your-Website.com/wp-
 Please visit our official support forum to report bugs, support and request more features: http://support.cssjockey.com/
 
 == Screenshots ==
-
-Please visit http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin for screenshots and other information.
+[Click here](http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin) to view screen-shots and other information about this plugin.
 
 == Changelog ==
-=1.02=
+
+= 1.02 =
 * Added option for Admin Login link in the footer
 * Optimized CSS to display Coming Soon Message without the heading
 
-=1.01=
+= 1.01 =
 * Added default theme without timer
 
-=1.0=
+= 1.0 =
 * Initial Release
