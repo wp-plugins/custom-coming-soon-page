@@ -40,15 +40,6 @@ $settingsname = $shortname."settings";
 <link rel="stylesheet" type="text/css" href="<?php echo $sp_plugin_url ?>/styleie7.css" media="screen" />
 <![endif]-->
 <link rel="shortcut icon" href="<?php echo $sp_plugin_url ?>/images/favicon.ico" />
-<script type="text/javascript">
-$(function(){
-    var liftoffTime = new Date(<?php echo sptop('launch_year'); ?>, <?php echo sptop('launch_month'); ?> - 1, <?php echo sptop('launch_day'); ?>, 0, 0);
-    $("#countdown").countdown({
-        until: liftoffTime,
-        layout: "{dn} {dl}, {hn} {hl}, {mn} {ml}, {sn} {sl}"
-    });
-});
-</script>
 <?php wp_head(); ?>
 <meta name="description" content="<?php echo sptop('head_description'); ?>" />
 <meta name="keywords" content="<?php echo sptop('head_keywords'); ?>" />

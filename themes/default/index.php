@@ -43,7 +43,7 @@ $settingsname = $shortname."settings";
 <script type="text/javascript">
 $(function(){
     var liftoffTime = new Date(<?php echo sptop('launch_year'); ?>, <?php echo sptop('launch_month'); ?> - 1, <?php echo sptop('launch_day'); ?>, 0, 0);
-    $("#countdown").countdown({
+    $("#cjsp-countdown").countdown({
         until: liftoffTime,
         layout: "{dn} {dl}, {hn} {hl}, {mn} {ml}, {sn} {sl}"
     });

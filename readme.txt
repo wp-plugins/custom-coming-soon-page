@@ -51,6 +51,9 @@ Please visit our official support forum to report bugs, support and request more
 
 == Changelog ==
 
+= 1.04 =
+* Fixed t Count Down Timer issue.
+
 = 1.03 =
 * Updated all CSS IDs and classes to avoid conflicts with other themes.
 * Fixed the issues being created by the date setup and the Count Down Timer.
