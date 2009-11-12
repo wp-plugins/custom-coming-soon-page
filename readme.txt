@@ -51,6 +51,9 @@ Please visit our official support forum to report bugs, support and request more
 
 == Changelog ==
 
+= 1.05 =
+* Removed wp_head() function from the plugin theme files as it loads the scripts used by other themes and plugins which is not requried on plugin theme files.
+
 = 1.04 =
 * Fixed t Count Down Timer issue.
 

@@ -54,7 +54,6 @@ body{
 	background:<?php echo sptop('custom_bg'); ?> <?php echo sptop('custom_bg_img'); ?>;
 }
 </style>
-<?php wp_head(); ?>
 <meta name="description" content="<?php echo sptop('head_description'); ?>" />
 <meta name="keywords" content="<?php echo sptop('head_keywords'); ?>" />
 <?php echo sptop('head_tags')."\n"; ?>

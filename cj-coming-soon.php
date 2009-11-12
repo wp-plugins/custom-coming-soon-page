@@ -3,7 +3,7 @@
 Plugin Name: CJ Coming Soon
 Plugin URI: http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin
 Description: This plugin shows a 'Custom Coming Soon' page to all users who are not logged in however, the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard. Visit our <strong><a href="http://support.cssjockey.com">Support Forum</a></strong> for support, report bugs and request more features and share your themes.
-Version: 1.04
+Version: 1.05
 Author: CSSJockey
 Author URI: http://www.cssjockey.com
 /*  Copyright 2009 CSSJockey.com  (email : admin@cssjockey.com)
@@ -467,15 +467,6 @@ if(get_option('sp_settings_check') == '0') {
 /************************************************************************************************************/
 /******************************************* ADMIN SETUP ENDS HERE ******************************************/
 /************************************************************************************************************/
-
-
-/******************************************
- * THEME HEAD FUNCTIONS
-******************************************/
-add_action('wp_head', 'sp_wp_head');
-function sp_wp_head() {
-	echo "<!-- *******************************\n Powered by Coming Soon WordPress Plugin by CSSJockey (http://www.cssjockey.com) \n ******************************* --> \n";
-}
 
 /******************************************
  * PLUGIN FUNCTIONS

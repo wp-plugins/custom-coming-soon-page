@@ -40,7 +40,6 @@ $settingsname = $shortname."settings";
 <link rel="stylesheet" type="text/css" href="<?php echo $sp_plugin_url ?>/styleie7.css" media="screen" />
 <![endif]-->
 <link rel="shortcut icon" href="<?php echo $sp_plugin_url ?>/images/favicon.ico" />
-<?php wp_head(); ?>
 <meta name="description" content="<?php echo sptop('head_description'); ?>" />
 <meta name="keywords" content="<?php echo sptop('head_keywords'); ?>" />
 <?php echo sptop('head_tags')."\n"; ?>
