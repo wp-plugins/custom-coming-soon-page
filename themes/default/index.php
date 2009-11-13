@@ -19,7 +19,7 @@ $settingsname = $shortname."settings";
 	$mykey = $shortname.$mykey;
 	foreach($sopt as $key=>$opt){
 		if($key == $mykey){
-			return $opt;
+			return stripslashes($opt);
 		}
 	}
 }
