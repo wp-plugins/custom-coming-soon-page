@@ -1,6 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<?php 
+<?php
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 require_once(dirname(__FILE__) . '../../../../../../wp-load.php'); 
 /** PLUGIN URL PATH **/
 // Pre-2.6 compatibility
@@ -39,7 +43,13 @@ $settingsname = $shortname."settings";
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="<?php echo $sp_plugin_url ?>/styleie7.css" media="screen" />
 <![endif]-->
-<link rel="shortcut icon" href="<?php echo $sp_plugin_url ?>/images/favicon.ico" />
+<?php
+if(sptop('favicon_url') == 'yoursite.com/favicon.ico'){
+    echo '<link rel="shortcut icon" href="'.$sp_plugin_url.'/images/favicon.ico" />';
+}else{
+    echo '<link rel="shortcut icon" href="'.sptop('favicon_url').'" />';
+}
+?>
 <script type="text/javascript">
 $(function(){
     var liftoffTime = new Date(<?php echo sptop('launch_year'); ?>, <?php echo sptop('launch_month'); ?> - 1, <?php echo sptop('launch_day'); ?>, 0, 0);
@@ -67,7 +77,7 @@ $(function(){
     </div>
 	<div id="cjsp-countdown">54 Days, 21 Hours, 11 Minutes, 23 Seconds</div><!-- /countdown -->
 	<div id="cjsp-subscribeform">
-		<form action="<?php echo $sp_plugin_url; ?>/mail.php#smessage" method="post" class="cjsp-aform" id="cjsp-sendsubscriber">
+		<form action="<?php echo $sp_plugin_url; ?>/mail.php#cjsp-smessage" method="post" class="aform" id="cjsp-sendsubscriber">
 			<input type="text" class="cjsp-inputbox" id="cjsp-semail" name="semail" value="Enter your email address"  onfocus="if ( this.value == this.defaultValue ) this.value = '';" onblur="if ( this.value == '' ) this.value = this.defaultValue" />
 			<input type="hidden" name="sto" value="<?php echo sptop('email_id'); ?>" />
 			<input type="hidden" name="ssubject" value="<?php echo sptop('email_subject'); ?>" />

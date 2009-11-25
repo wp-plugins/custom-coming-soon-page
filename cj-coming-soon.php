@@ -3,7 +3,7 @@
 Plugin Name: CJ Coming Soon
 Plugin URI: http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin
 Description: This plugin shows a 'Custom Coming Soon' page to all users who are not logged in however, the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard. Visit our <strong><a href="http://support.cssjockey.com">Support Forum</a></strong> for support, report bugs and request more features and share your themes.
-Version: 1.06
+Version: 1.07
 Author: CSSJockey
 Author URI: http://www.cssjockey.com
 /*  Copyright 2009 CSSJockey.com  (email : admin@cssjockey.com)
@@ -103,28 +103,19 @@ function cj_splash_options_page(){
 				"otype" => "radio",
                                 "ovalue" => array('No', 'Yes')),
 			array(
-				"oid" => $shortname."custom_bg",
-				"oclass" => $shortname."basic_config",
-				"oname" => "Custom Background Color",
-				"oinfo" => 'Enter #HEX value of desired background color. e.g. #000000 for black 
-							<br /><span style="color:#990000">This will only work with Custom Background Color</span>',
-				"otype" => "text",
-                                "ovalue" => "#990000"),
-			array(
-				"oid" => $shortname."custom_bg_img",
-				"oclass" => $shortname."basic_config",
-				"oname" => "Custom Background Image",
-				"oinfo" => 'Enter CSS property with URL and positioning of background image. <br /><b>e.g.</b> url(http://yourwebsite.com/images/bg.jpg) repeat | Leave blank for none. 
-							<br /><span style="color:#990000">This will only work with Custom Background Color</span>',
-				"otype" => "text",
-                                "ovalue" => "url(http://yourwebsite.com/images/bg.jpg) repeat"),
-			array(
 				"oid" => $shortname."logo_url",
 				"oclass" => $shortname."basic_config",
 				"oname" => "Logo Image URL",
 				"oinfo" => 'Enter full URL of the logo image. Use <b>transparent .png</b> file for best results, Don\'t worry IE6 is tamed.',
 				"otype" => "text",
                                 "ovalue" => "yoursite.com/images/logo.png"),
+			array(
+				"oid" => $shortname."favicon_url",
+				"oclass" => $shortname."basic_config",
+				"oname" => "Favicon URL",
+				"oinfo" => 'Enter full URL for your <b>favicon.ico</b> file.',
+				"otype" => "text",
+                                "ovalue" => "yoursite.com/favicon.ico"),
 			array(
 				"oid" => $shortname."page_heading",
 				"oclass" => $shortname."basic_config",
@@ -160,6 +151,30 @@ function cj_splash_options_page(){
 				"oinfo" => 'Enter RSS URL (leave it blank if you don\'t wish to display this link )<br />e.g. http://feeds.feedburner.com/<b>cssjockey</b>',
 				"otype" => "text",
                                 "ovalue" => 'http://feeds.feedburner.com/cssjockey'),
+
+			array(
+				"oid" => $shortname."custom_bg_settings",
+				"oclass" => $shortname."custom_bg_config",
+				"oname" => "Custom Background &raquo;",
+				"oinfo" => '',
+				"otype" => "heading",
+                                "ovalue" => "Custom Background &raquo;"),
+			array(
+				"oid" => $shortname."custom_bg",
+				"oclass" => $shortname."custom_bg_config",
+				"oname" => "Custom Background Color",
+				"oinfo" => 'Enter #HEX value of desired background color. e.g. #000000 for black
+							<br /><span style="color:#990000">This will only work with Custom Background Option</span>',
+				"otype" => "text",
+                                "ovalue" => "#990000"),
+			array(
+				"oid" => $shortname."custom_bg_img",
+				"oclass" => $shortname."custom_bg_config",
+				"oname" => "Custom Background Image",
+				"oinfo" => 'Enter CSS property with URL and positioning of background image. <br /><b>e.g.</b> url(http://yourwebsite.com/images/bg.jpg) repeat | Leave blank for none.
+							<br /><span style="color:#990000">This will only work with Custom Background Option</span>',
+				"otype" => "text",
+                                "ovalue" => "url(http://yourwebsite.com/images/bg.jpg) repeat"),
 
 		    array(  
 				"oid" => $shortname."seo_settings",

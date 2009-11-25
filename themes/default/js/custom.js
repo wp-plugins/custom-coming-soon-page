@@ -13,7 +13,7 @@ $(document).ready(function(){
             email.focus();
             return false;
         }
-        else 
+        else
             if (email.val().search(emailFormat) == -1) {
                 alert("Please enter valid email address!");
                 email.focus();
@@ -37,7 +37,7 @@ $(document).ready(function(){
             }
         return false;
     })
-	
+
 
     $("#cjsp-smessage").ajaxStart(function(){
         $("#cjsp-semail").val('Please wait..');
@@ -45,5 +45,5 @@ $(document).ready(function(){
         $(this).addClass("cjsp-sploading");
         return false;
     });
-		
+
 })

@@ -50,6 +50,9 @@ Please visit our official support forum to report bugs, support and request more
 [Click here](http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin) to view screen-shots and other information about this plugin.
 
 == Changelog ==
+= 1.07 =
+* Fixed possible mail issues and ie bugs.
+* Added an option to use custom favicon.ico file.
 
 = 1.06 =
 * Fixed the characters display when using single or double quotation marks.
