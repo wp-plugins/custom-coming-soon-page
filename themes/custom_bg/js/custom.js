@@ -20,20 +20,24 @@ $(document).ready(function(){
                 return false;
             }
             else {
-                var url = $(this).attr('action');
-                var dataString = $('.aform').serialize();
-                var update = url.split("#")[1];
-                $.ajax({
-                    type: "POST",
-                    url: "" + url + "",
-                    data: dataString,
-                    success: function(response){
-                        $('#' + update + "").html(response);
-                        $("#cjsp-smessage").removeClass("cjsp-sploading");
-                        $(email).val('Enter your email address');
-                        $("#cjsp-semail").val('Thank you');
-                    }
-                });
+            var url = $(this).attr('action');
+            var dataString = $('.aform').serialize();
+            var updatecontainer = url.split("#")[1];
+            newurl = url.split("#")[0];
+            newurl = newurl + "?random=" + Math.random() + "#" + updatecontainer;
+            var update = url.split("#")[1];
+            var update = update.split("&")[0];
+            $.ajax({
+                type: "POST",
+                url: "" + newurl + "",
+                data: dataString,
+                success: function(response){
+                    $('#' + update).html(response);
+                    $("#cjsp-smessage").removeClass("cjsp-sploading");
+                    $(email).val('Enter your email address');
+                    $("#cjsp-semail").val('Thank you');
+                }
+            })
             }
         return false;
     })

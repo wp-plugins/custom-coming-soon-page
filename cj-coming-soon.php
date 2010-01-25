@@ -3,7 +3,7 @@
 Plugin Name: CJ Coming Soon
 Plugin URI: http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin
 Description: This plugin shows a 'Custom Coming Soon' page to all users who are not logged in however, the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard. Visit our <strong><a href="http://support.cssjockey.com">Support Forum</a></strong> for support, report bugs and request more features and share your themes.
-Version: 1.07
+Version: 1.08
 Author: CSSJockey
 Author URI: http://www.cssjockey.com
 /*  Copyright 2009 CSSJockey.com  (email : admin@cssjockey.com)
@@ -23,11 +23,11 @@ if ( !defined('WP_CONTENT_DIR') )define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content
 /******************************************
  * DEFAULT VARIABLES 
 ******************************************/
-global $cj_splash_path, $shortname, $theme_settings_name, $options;
+global $cj_splash_path, $cj_splash_shortname, $cj_splash_settings_name, $cj_splash_options;
 $cj_splash_plugin_name = "CJ Splash Page";
 $cj_splash_path = WP_CONTENT_URL.'/plugins/'.plugin_basename(dirname(__FILE__));
-$shortname = strtolower(str_replace(" ", "_", $cj_splash_plugin_name)."_");
-$theme_settings_name = $shortname."settings";
+$cj_splash_shortname = strtolower(str_replace(" ", "_", $cj_splash_plugin_name)."_");
+$cj_splash_settings_name = $cj_splash_shortname."settings";
 /******************************************
  * ADMIN PAGE SETUP - ADMIN SCRIPTS
 ******************************************/
@@ -69,26 +69,26 @@ function cj_splash_admin_menu(){
 	add_action('admin_print_scripts-' . $page, 'cj_splash_plugin_admin_styles');
 }
 function cj_splash_options_page(){
-	global $theme_settings_name, $shortname;
-	$options = array (
+	global $cj_splash_settings_name, $cj_splash_shortname;
+	$cj_splash_options = array (
 	// START EDITING HERE
 		    array(  
-				"oid" => $shortname."basic_configuration",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."basic_configuration",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Plugin Settings &raquo;",
 				"oinfo" => '',
 				"otype" => "heading",
                                 "ovalue" => 'Basic Settings &raquo;'),
 			array(
-				"oid" => $shortname."enable_page",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."enable_page",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Enable Custom Page",
 				"oinfo" => 'You can enable or disable the custom page here.',
 				"otype" => "radio",
                                 "ovalue" => array("Enable", "Disable")),
                         array(
-				"oid" => $shortname."select_theme",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."select_theme",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Configure Theme Style",
 				"oinfo" => '<b>Default</b>: This will enable the default black theme for the page.<br />
 							<b>Custom Background</b>: You can specify desired background color and image below.<br />
@@ -96,80 +96,80 @@ function cj_splash_options_page(){
 				"otype" => "radio",
                                 "ovalue" => array("Default", "Without Timer", "Custom Background", "Custom xHTML")),
 			array(
-				"oid" => $shortname."login_link",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."login_link",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Login Link in Footer",
 				"oinfo" => 'Would you like to display login link in the footer?',
 				"otype" => "radio",
                                 "ovalue" => array('No', 'Yes')),
 			array(
-				"oid" => $shortname."logo_url",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."logo_url",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Logo Image URL",
 				"oinfo" => 'Enter full URL of the logo image. Use <b>transparent .png</b> file for best results, Don\'t worry IE6 is tamed.',
 				"otype" => "text",
                                 "ovalue" => "yoursite.com/images/logo.png"),
 			array(
-				"oid" => $shortname."favicon_url",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."favicon_url",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Favicon URL",
 				"oinfo" => 'Enter full URL for your <b>favicon.ico</b> file.',
 				"otype" => "text",
                                 "ovalue" => "yoursite.com/favicon.ico"),
 			array(
-				"oid" => $shortname."page_heading",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."page_heading",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Page Heading",
 				"oinfo" => 'Enter heading in the above box. e.g. Coming Soon! or Under Construction!',
 				"otype" => "text",
                                 "ovalue" => "Coming Soon!"),
 			array(
-				"oid" => $shortname."page_msg",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."page_msg",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Coming Soon Message",
 				"oinfo" => 'Enter a message for the users. Keep it short and <b>Avoid HTML tags.</b>',
 				"otype" => "textarea",
                                 "ovalue" => "We're not there yet - but getting there - and we really want you to know when we're ready. So be sure to stay updated."),
 			array(
-				"oid" => $shortname."twitter_username",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."twitter_username",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Twitter Username",
 				"oinfo" => 'Enter your Twitter username (leave it blank if you don\'t wish to display this link )<br />e.g. http://www.twitter.com/<b>cssjockey</b>',
 				"otype" => "text",
                                 "ovalue" => 'cssjockey'),
 			array(
-				"oid" => $shortname."facebook_username",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."facebook_username",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "Facebook Username",
 				"oinfo" => 'Enter your facebook username (leave it blank if you don\'t wish to display this link ) <br />e.g. http://www.facebook.com/<b>cssjockey</b>',
 				"otype" => "text",
                                 "ovalue" => 'cssjockey'),
 			array(
-				"oid" => $shortname."rss_url",
-				"oclass" => $shortname."basic_config",
+				"oid" => $cj_splash_shortname."rss_url",
+				"oclass" => $cj_splash_shortname."basic_config",
 				"oname" => "RSS URL (if any)",
 				"oinfo" => 'Enter RSS URL (leave it blank if you don\'t wish to display this link )<br />e.g. http://feeds.feedburner.com/<b>cssjockey</b>',
 				"otype" => "text",
                                 "ovalue" => 'http://feeds.feedburner.com/cssjockey'),
 
 			array(
-				"oid" => $shortname."custom_bg_settings",
-				"oclass" => $shortname."custom_bg_config",
+				"oid" => $cj_splash_shortname."custom_bg_settings",
+				"oclass" => $cj_splash_shortname."custom_bg_config",
 				"oname" => "Custom Background &raquo;",
 				"oinfo" => '',
 				"otype" => "heading",
                                 "ovalue" => "Custom Background &raquo;"),
 			array(
-				"oid" => $shortname."custom_bg",
-				"oclass" => $shortname."custom_bg_config",
+				"oid" => $cj_splash_shortname."custom_bg",
+				"oclass" => $cj_splash_shortname."custom_bg_config",
 				"oname" => "Custom Background Color",
 				"oinfo" => 'Enter #HEX value of desired background color. e.g. #000000 for black
 							<br /><span style="color:#990000">This will only work with Custom Background Option</span>',
 				"otype" => "text",
                                 "ovalue" => "#990000"),
 			array(
-				"oid" => $shortname."custom_bg_img",
-				"oclass" => $shortname."custom_bg_config",
+				"oid" => $cj_splash_shortname."custom_bg_img",
+				"oclass" => $cj_splash_shortname."custom_bg_config",
 				"oname" => "Custom Background Image",
 				"oinfo" => 'Enter CSS property with URL and positioning of background image. <br /><b>e.g.</b> url(http://yourwebsite.com/images/bg.jpg) repeat | Leave blank for none.
 							<br /><span style="color:#990000">This will only work with Custom Background Option</span>',
@@ -177,92 +177,92 @@ function cj_splash_options_page(){
                                 "ovalue" => "url(http://yourwebsite.com/images/bg.jpg) repeat"),
 
 		    array(  
-				"oid" => $shortname."seo_settings",
-				"oclass" => $shortname."head_settings",
+				"oid" => $cj_splash_shortname."seo_settings",
+				"oclass" => $cj_splash_shortname."head_settings",
 				"oname" => "Header Settings &raquo;",
 				"oinfo" => '',
 				"otype" => "heading",
                                 "ovalue" => 'SEO Settings &raquo;'),
 		    array(  
-				"oid" => $shortname."head_title",
-				"oclass" => $shortname."head_settings",
+				"oid" => $cj_splash_shortname."head_title",
+				"oclass" => $cj_splash_shortname."head_settings",
 				"oname" => "Document Title",
 				"oinfo" => 'Please enter document title, this will show up in Google Search Results once your coming soon page is indexed.',
 				"otype" => "text",
                                 "ovalue" => 'Coming Soon | Powered by CSSJockey'),
 		    array(  
-				"oid" => $shortname."head_keywords",
-				"oclass" => $shortname."head_settings",
+				"oid" => $cj_splash_shortname."head_keywords",
+				"oclass" => $cj_splash_shortname."head_settings",
 				"oname" => "Meta Keywords",
 				"oinfo" => 'Enter some keywords, there\'s no harm adding a few at this stage.',
 				"otype" => "text",
                                 "ovalue" => 'coming soon page, launch page, under construction page'),
 		    array(  
-				"oid" => $shortname."head_description",
-				"oclass" => $shortname."head_settings",
+				"oid" => $cj_splash_shortname."head_description",
+				"oclass" => $cj_splash_shortname."head_settings",
 				"oname" => "Meta Description",
 				"oinfo" => 'Enter some text for META Description tag, this will show up in Google search results once your coming soon page is indexed.',
 				"otype" => "textarea",
                                 "ovalue" => 'Coming Soon Page WordPress Plugin is simply a modern version of the under construction page that you can use if you are about to launch your website, doing some cool enhancements on the design or just fixing some stupid bugs on your WordPress blog or website.'),
 		    array(  
-				"oid" => $shortname."head_tags",
-				"oclass" => $shortname."head_settings",
+				"oid" => $cj_splash_shortname."head_tags",
+				"oclass" => $cj_splash_shortname."head_settings",
 				"oname" => "Additional Head Tags",
 				"oinfo" => 'Enter valid xHTML code to be included within &lt;head&gt;&lt;/head&gt; tags.',
 				"otype" => "textarea",
                                 "ovalue" => '<!-- Additional Meta Tags -->'),
 		    array(  
-				"oid" => $shortname."email_settings",
-				"oclass" => $shortname."email_settings",
+				"oid" => $cj_splash_shortname."email_settings",
+				"oclass" => $cj_splash_shortname."email_settings",
 				"oname" => "Email Settings &raquo;",
 				"oinfo" => '',
 				"otype" => "heading",
                                 "ovalue" => 'Email Settings &raquo;'),
 			array(
-				"oid" => $shortname."email_id",
-				"oclass" => $shortname."email_settings",
+				"oid" => $cj_splash_shortname."email_id",
+				"oclass" => $cj_splash_shortname."email_settings",
 				"oname" => "Your Email Address",
 				"oinfo" => 'Subscription info will be sent to this address.',
 				"otype" => "text",
                                 "ovalue" => get_option('admin_email')),
 			array(
-				"oid" => $shortname."email_subject",
-				"oclass" => $shortname."email_settings",
+				"oid" => $cj_splash_shortname."email_subject",
+				"oclass" => $cj_splash_shortname."email_settings",
 				"oname" => "Email Subject Line",
 				"oinfo" => 'Enter a subject line to identify and create filters based on the email program you use.',
 				"otype" => "text",
                                 "ovalue" => "Subscriber's Info @ ".get_bloginfo('name')),
 			array(
-				"oid" => $shortname."email_thankyou",
-				"oclass" => $shortname."email_settings",
+				"oid" => $cj_splash_shortname."email_thankyou",
+				"oclass" => $cj_splash_shortname."email_settings",
 				"oname" => "Thank you message",
 				"oinfo" => 'Enter a short thank you message to the user once he/she subscribe to the mailing list.',
 				"otype" => "textarea",
                                 "ovalue" => "Thank you for subscribing to the our Launch Announcement email list."),
 		    array(  
-				"oid" => $shortname."launch_date",
-				"oclass" => $shortname."launch_date",
+				"oid" => $cj_splash_shortname."launch_date",
+				"oclass" => $cj_splash_shortname."launch_date",
 				"oname" => "Launch Date &raquo;",
 				"oinfo" => '',
 				"otype" => "heading",
                                 "ovalue" => 'Launch Date &raquo;'),
 		    array(  
-				"oid" => $shortname."launch_day",
-				"oclass" => $shortname."launch_date",
+				"oid" => $cj_splash_shortname."launch_day",
+				"oclass" => $cj_splash_shortname."launch_date",
 				"oname" => "Day of the Month (DD)",
 				"oinfo" => 'e.g. 01 - 31',
 				"otype" => "text",
                                 "ovalue" => '15'),
 		    array(  
-				"oid" => $shortname."launch_month",
-				"oclass" => $shortname."launch_date",
+				"oid" => $cj_splash_shortname."launch_month",
+				"oclass" => $cj_splash_shortname."launch_date",
 				"oname" => "Month (MM)",
 				"oinfo" => 'e.g. 01 - 12',
 				"otype" => "text",
-                                "ovalue" => '01'),
+                                "ovalue" => '03'),
 		    array(  
-				"oid" => $shortname."launch_year",
-				"oclass" => $shortname."launch_date",
+				"oid" => $cj_splash_shortname."launch_year",
+				"oclass" => $cj_splash_shortname."launch_date",
 				"oname" => "Year (YYYY)",
 				"oinfo" => 'e.g. 2009',
 				"otype" => "text",
@@ -270,41 +270,45 @@ function cj_splash_options_page(){
 	// END EDITING HERE
 );
 /**** INSTALL SETTINGS / ADD OPTIONS ***************************/
-foreach($options as $value){
+foreach($cj_splash_options as $value){
 	$saveoptions[$value['oid']] = $value['ovalue'];
 }
-add_option($theme_settings_name, $saveoptions);
+add_option($cj_splash_settings_name, $saveoptions);
 /**** SAVE SETTINGS / UPDATE OPTIONS ***************************/
 if(isset($_REQUEST['cjsave'])){
-foreach($options as $value){
+foreach($cj_splash_options as $value){
 	$saveoptions[$value['oid']] = $_REQUEST[$value['oid']];
 }
-update_option($theme_settings_name, $saveoptions);
+update_option($cj_splash_settings_name, $saveoptions);
 echo '<div id="message" class="updated fade"><p><strong>Theme settings updated.</strong></p></div>';
 }
 /**** RESET SETTINGS / DELETE OPTIONS ***************************/
 if(isset($_REQUEST['cjreset'])){
-delete_option($theme_settings_name);
-foreach($options as $value){
+delete_option($cj_splash_settings_name);
+foreach($cj_splash_options as $value){
 	$saveoptions[$value['oid']] = $value['ovalue'];
 }
-update_option($theme_settings_name, $saveoptions);
+update_option($cj_splash_settings_name, $saveoptions);
 echo '<div id="message" class="updated fade"><p><strong>Theme settings updated.</strong></p></div>';
 }
 /**** SAVE SETTINGS / ADD OPTIONS ***************************/
 if(isset($_REQUEST['cjremove'])){
-delete_option($theme_settings_name);
+delete_option($cj_splash_settings_name);
 $reseturl =  get_bloginfo("wpurl")."/wp-admin/themes.php";
 switch_theme('default', 'default');
 wp_redirect($reseturl);
 }
 /**** GET SAVED VALUES ***************************/
 function cj_splash_gop($mykey){
-global $theme_settings_name;
-$sopt = get_option($theme_settings_name);
+global $cj_splash_settings_name;
+$sopt = get_option($cj_splash_settings_name);
 	foreach($sopt as $key=>$opt){
 		if($key == $mykey){
-			return stripslashes($opt);
+                    if(is_array($opt)){
+                        return $opt;
+                    }else{
+                        return stripslashes($opt);
+                    }
 		}
 	}
 }
@@ -315,7 +319,7 @@ $sopt = get_option($theme_settings_name);
 <div id="cjwarp">
 <form action="" method="post">
 <?php
-foreach($options as $key){ ?>
+foreach($cj_splash_options as $key){ ?>
 <?php if($key['otype'] == "heading"){ ?>
 	<h1 id="<?php echo $key['oclass']; ?>" class="cjhead"><?php echo $key['ovalue']; ?></h1>
 <?php } ?>
@@ -468,7 +472,11 @@ $rss_items = $rss->get_items(0, $maxitems);
         update_option('sp_settings_check' , '1');
     }
 } //options page
-
+register_deactivation_hook(__FILE__, 'cj_splash_deactivate');
+function cj_splash_deactivate(){
+    global $cj_splash_settings_name;
+    delete_option($cj_splash_settings_name);
+}
 /******************************************
  * PLUGIN SETTINGS CHECK
 ******************************************/
@@ -488,10 +496,15 @@ if(get_option('sp_settings_check') == '0') {
 ******************************************/
 add_action('get_header', 'sp_override');
 function cj_splash_top($mykey){
-global $theme_settings_name, $shortname;
-$mykey = $shortname.$mykey;
-$sopt = get_option($theme_settings_name);
-foreach($sopt as $key=>$opt){if($key == $mykey){return stripslashes($opt);}}
+global $cj_splash_settings_name, $cj_splash_shortname;
+$mykey = $cj_splash_shortname.$mykey;
+$sopt = get_option($cj_splash_settings_name);
+foreach($sopt as $key=>$opt) {
+    if($key == $mykey) {
+        return stripslashes($opt);
+    }
+}
+
 }
 
 function sp_override(){
