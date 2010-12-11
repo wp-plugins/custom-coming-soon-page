@@ -3,7 +3,7 @@
 Plugin Name: CJ Coming Soon
 Plugin URI: http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin
 Description: This plugin shows a 'Custom Coming Soon' page to all users who are not logged in however, the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard. Visit our <strong><a href="http://support.cssjockey.com">Support Forum</a></strong> for support, report bugs and request more features and share your themes.
-Version: 1.08
+Version: 1.09
 Author: CSSJockey
 Author URI: http://www.cssjockey.com
 /*  Copyright 2009 CSSJockey.com  (email : admin@cssjockey.com)
@@ -259,14 +259,14 @@ function cj_splash_options_page(){
 				"oname" => "Month (MM)",
 				"oinfo" => 'e.g. 01 - 12',
 				"otype" => "text",
-                                "ovalue" => '03'),
+                                "ovalue" => '02'),
 		    array(  
 				"oid" => $cj_splash_shortname."launch_year",
 				"oclass" => $cj_splash_shortname."launch_date",
 				"oname" => "Year (YYYY)",
-				"oinfo" => 'e.g. 2009',
+				"oinfo" => 'e.g. 2011',
 				"otype" => "text",
-                                "ovalue" => '2010'),
+                                "ovalue" => '2011'),
 	// END EDITING HERE
 );
 /**** INSTALL SETTINGS / ADD OPTIONS ***************************/
@@ -307,7 +307,7 @@ $sopt = get_option($cj_splash_settings_name);
                     if(is_array($opt)){
                         return $opt;
                     }else{
-                        return stripslashes($opt);
+                        return stripcslashes($opt);
                     }
 		}
 	}
@@ -316,6 +316,9 @@ $sopt = get_option($cj_splash_settings_name);
 <div class="wrap">
 <div id="icon-options-general" class="icon32"><br></div>
 <h2>Plugin Settings</h2>
+
+<p><b>Upgrade to <a href="http://www.netchillies.com/coming-soon-pages" title="">Pro Version</a> for more themes and options.</b></p>
+
 <div id="cjwarp">
 <form action="" method="post">
 <?php
@@ -501,7 +504,7 @@ $mykey = $cj_splash_shortname.$mykey;
 $sopt = get_option($cj_splash_settings_name);
 foreach($sopt as $key=>$opt) {
     if($key == $mykey) {
-        return stripslashes($opt);
+        return stripcslashes($opt);
     }
 }
 

@@ -3,7 +3,7 @@ Contributors: cssjockey
 Donate link: 
 Tags: coming soon, under construction, maintenance page, custom landing page
 Requires at least: 2.8
-Tested up to: 2.9.1
+Tested up to: 3.0.3
 Stable tag: trunk
 
 This plugin shows a 'Custom Coming Soon' page to all users who are not logged in and the Administrators see the fully functional website.
@@ -22,7 +22,7 @@ This will enable you to perform upgrades, fix nasty bugs or preview jazzy enhanc
 6. Subscribe form
 7. Social Profiles
 
-[Live Demo](http://plugins.cssjockey.com/coming-soon/) | [More Details](http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin)
+[More Details](http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin)
 
 Please visit [our support forum](http://support.cssjockey.com/) to report bugs, support and request more features.
 
@@ -50,6 +50,9 @@ Please visit our official support forum to report bugs, support and request more
 [Click here](http://www.cssjockey.com/wordpress-plugins/custom-coming-soon-pages-wordpress-plugin) to view screen-shots and other information about this plugin.
 
 == Changelog ==
+= 1.09 =
+* Fixed issues to work with WordPress Version 3.0.3.
+
 = 1.08 =
 * Fixed email issues reported by IE8 users.
 * Updated variable names to avoid any conflict with others.
