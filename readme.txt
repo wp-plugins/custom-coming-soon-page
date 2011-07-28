@@ -50,7 +50,7 @@ Please visit our official support forum to report bugs, support and request more
 [Click here](http://www.netchillies.com/coming-soon-pages-free) to view screen-shots and other information about this plugin.
 
 == Changelog ==
-= 2.0.1 =
+= 2.1.0 =
 * Created the plugin all over again from scratch and fixed known issues
 * Added feedburner email subscription support
 * Added AddThis service for social media integration and sharing
