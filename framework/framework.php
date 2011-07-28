@@ -15,7 +15,7 @@ function nccsf_product_info($var) {
         // ITEM INFO
         'item_id' => '1001',
         'item_name' => 'Coming Soon Pages [Free]',
-        'item_version' => '2.0.1',
+        'item_version' => '2.1.0',
         'item_url' => 'http://www.netchillies.com/coming-soon-pages-free/',
         'pro_version_url' => 'http://www.netchillies.com/coming-soon-pages/',
         // WORDPRESS VARIABLES
@@ -388,6 +388,8 @@ function nccsf_display_options($options, $submit_button = null) {
     <div id="nc-wrap" class="clearfix">
         <form action="" method="post">
 
+            <?php echo '<p>Check out the <a target="_blank" href="' . nccsf_product_info('pro_version_url') . '" title="">Premium Version </a> of this product.</p>'; ?>
+            
     <?php
     if (!empty($_POST)) {
 
