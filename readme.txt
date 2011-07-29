@@ -1,7 +1,7 @@
 === Custom Coming Soon Pages ===
 Contributors: cssjockey, netchillies
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QEF4EPJM57U94
-Tags: coming soon page, under construction page, maintenance mode, custom landing page, maintenance mode plugin
+Tags: coming soon page, under construction page, maintenance mode, custom landing page, maintenance mode plugin, landing pages
 Requires at least: 3.0
 Tested up to: 3.2.1
 Stable tag: trunk
