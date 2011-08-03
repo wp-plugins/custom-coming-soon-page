@@ -1,12 +1,8 @@
-#contextual-help-link-wrap { 
-    display: none !important; 
-}
-
 .fw-relative{
     position: relative;
 }
 
-.hidden{
+.nc-hidden{
     display: none !important;
 }
 

@@ -309,17 +309,6 @@ $nccsf_options['info_page'] = array(
         'odefault' => nccsf_product_info('item_name'),
     ),
     array(
-        'oid' => 'item_version',
-        'oname' => 'Version Number',
-        'otype' => 'info',
-        'oinfo' => '',
-        'osuffix' => 'px',
-        'ovalue' => '',
-        'odefault' => nccsf_product_info('item_version') . ' &nbsp; 
-                      <a href="http://api.netchillies.com/updates.php?id=' . nccsf_product_info('item_id') . '&version=' . nccsf_product_info('item_version') . '&rurl=' . nccsf_current_url() . '" class="button-secondary" title="">Check for updates</a>
-                      ',
-    ),
-    array(
         'oid' => 'terms_of_use',
         'oname' => 'License',
         'otype' => 'info',

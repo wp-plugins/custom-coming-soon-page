@@ -50,6 +50,9 @@ Please visit our official support forum to report bugs, support and request more
 [Click here](http://www.netchillies.com/coming-soon-pages-free) to view screen-shots and other information about this plugin.
 
 == Changelog ==
+= 2.1.01 =
+* Fixed Screen Options & Help Menu bugs.
+
 = 2.1.0 =
 * Created the plugin all over again from scratch and fixed known issues
 * Added feedburner email subscription support
