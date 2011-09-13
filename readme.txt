@@ -50,6 +50,9 @@ Please visit our official support forum to report bugs, support and request more
 [Click here](http://www.netchillies.com/coming-soon-pages-free) to view screen-shots and other information about this plugin.
 
 == Changelog ==
+= 2.1.02 =
+* Added an option to choose link color as per users request.
+
 = 2.1.01 =
 * Fixed Screen Options & Help Menu bugs.
 

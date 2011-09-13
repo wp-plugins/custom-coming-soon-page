@@ -15,7 +15,7 @@ function nccsf_product_info($var) {
         // ITEM INFO
         'item_id' => '1001',
         'item_name' => 'Coming Soon Pages [Free]',
-        'item_version' => '2.1.01',
+        'item_version' => '2.1.02',
         'item_url' => 'http://www.netchillies.com/coming-soon-pages-free/',
         'pro_version_url' => 'http://www.netchillies.com/coming-soon-pages/',
         // WORDPRESS VARIABLES

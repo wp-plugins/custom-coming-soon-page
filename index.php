@@ -4,7 +4,7 @@
   Plugin URI: http://www.netchillies.com/coming-soon-pages-free
   Description: This plugin shows a 'Custom Coming Soon' page to all users who are not logged in however, the Site Administrators see the fully functional website with the applied theme and active plugins as well as a fully functional Dashboard.
   Author: NetChillies.com
-  Version: 2.1.01
+  Version: 2.1.02
   Author URI: http://www.netchillies.com/
  */
 /*  Copyright 2011 NetChillies.com  (email : support@netchillies.com)

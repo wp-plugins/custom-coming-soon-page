@@ -167,10 +167,19 @@ $nccsf_options['branding'] = array(
         'oid' => 'custom_color_scheme',
         'oname' => 'Background Color',
         'otype' => 'color',
-        'oinfo' => 'Choose a custom color for background and other elements.',
+        'oinfo' => 'Choose a custom color for background.',
         'osuffix' => '',
         'ovalue' => '',
         'odefault' => '2679b1',
+    ),
+    array(
+        'oid' => 'custom_link_color',
+        'oname' => 'Link Color',
+        'otype' => 'color',
+        'oinfo' => 'Choose a custom color for links on the coming soon page.',
+        'osuffix' => '',
+        'ovalue' => '',
+        'odefault' => '2277ea',
     ),
 );
 

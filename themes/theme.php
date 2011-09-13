@@ -21,10 +21,11 @@ if(nccsf_top('color_scheme') == ''){
         <?php 
             if(nccsf_top('color_scheme') == 'custom'){
                 $bg_color = nccsf_top('custom_color_scheme');
+                $link_color = nccsf_top('custom_link_color');
                 echo '
 <style type="text/css">
 body{background-color: #'.$bg_color.';} 
-a{color:#'.$bg_color.' !important;} 
+a{color:#'.$link_color.' !important;}
 #email_subscription{background:#'.$bg_color.' !important;} 
 </style>
 ';
