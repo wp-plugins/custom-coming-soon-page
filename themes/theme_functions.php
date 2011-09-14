@@ -75,8 +75,8 @@ countdown(' . date('Y', strtotime($date)) . ',' . date('m', strtotime($date)) . 
             $content .= '</div>';
 
         endif;
-        
-        
+
+
     } else {
         $content = '';
     }
@@ -89,10 +89,10 @@ function nccsf_twitter_feed() {
         $content .= '
 <div class="twitters" id="tweets">
     '.__('Loading Tweets', 'nccsf').'
-</div>            
+</div>
 <span class="twitter-icon-big">&nbsp;</span>
 ';
-        
+
         $content .= "
 <script type=\"text/javascript\">
 		getTwitters('tweets', {
@@ -100,14 +100,14 @@ function nccsf_twitter_feed() {
 		timeout: 3,
 		count: 1,
 		onTimeout: function () {
-                	this.innerHTML = 'Twitter is down right now :( so you can follow me @cssjockey to view my updates!';
+                	this.innerHTML = 'Twitter is down right now :( Follow me @".nccsf_top('twitter_handle')." to view my updates!';
                 },
                 onTimeoutCancel: true, // don't allow twitter to finsih the job
 		ignoreReplies: true
 	});
-</script>            
+</script>
 ";
-        
+
         $content .= '</div>';
     } else {
         $content = '';
